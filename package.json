@@ -1,0 +1,39 @@
+{
+  "name": "kronos-ai",
+  "version": "2.0.0",
+  "description": "KRONOS — 100-agent autonomous AI system with content pipeline (Nano Banana Pro + Kling 2.6), 7-platform auto-posting, Claude Cowork desktop control, and infinite memory",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "db:setup": "node scripts/db-setup.js",
+    "dashboard": "cd dashboard && npm run dev",
+    "campaign": "node scripts/launch-campaign.js"
+  },
+  "keywords": ["ai", "agents", "claude", "content-automation", "kling", "nano-banana", "social-media"],
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.36.0",
+    "@google/generative-ai": "^0.21.0",
+    "@pinecone-database/pinecone": "^3.0.0",
+    "@fastify/cors": "^9.0.0",
+    "@fastify/websocket": "^10.0.0",
+    "bullmq": "^5.15.0",
+    "fastify": "^4.28.0",
+    "ioredis": "^5.4.0",
+    "p-limit": "^6.1.0",
+    "pg": "^8.13.0",
+    "uuid": "^10.0.0",
+    "dotenv": "^16.4.7",
+    "node-cron": "^3.0.3",
+    "node-fetch": "^3.3.2",
+    "sharp": "^0.33.0",
+    "winston": "^3.14.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
